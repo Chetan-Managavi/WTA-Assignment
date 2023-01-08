@@ -1,0 +1,31 @@
+<html>
+<head>
+ <style>
+ #scrollingText {
+ position: absolute;
+ top: 10%;
+ left: 0;
+ white-space: nowrap;
+ animation: moveText 5s linear infinite;
+ display: none;
+ }
+ @keyframes moveText {
+ from {
+ transform: translateX(-100%);
+ }
+ to {
+ transform: translateX(100%);
+ }
+ }
+ </style>
+</head>
+<body>
+ <button onclick="startScrolling()">Start Scrolling</button>
+ <div id="scrollingText">Hello!   I am scrolling</div>
+ <script>
+ function startScrolling() {
+ document.getElementById("scrollingText").style.display = "block";
+ }
+ </script>
+</body>
+</html>

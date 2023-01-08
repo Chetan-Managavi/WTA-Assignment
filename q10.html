@@ -1,0 +1,51 @@
+<html>
+<head>
+ <style>
+ img {
+ width: 20%;
+ }
+ .big-image {
+ position: absolute;
+ top: 5%;
+ left: 10%;
+ width: 80%;
+ height: 60%;
+ display: none;
+ }
+ .container{
+ position: fixed;
+ bottom: 5%;
+ left: 30%;
+ }
+ </style>
+ <script type="text/javascript">
+ function showBig(i) {
+ var image = document.getElementById(`big-image-${i}`);
+ image.style.display = "block";
+ }
+ function hideBig(i) {
+ var image = document.getElementById(`big-image-${i}`);
+ image.style.display = "none";
+ }
+ </script>
+</head>
+<body>
+ <div class="ooo">
+ <img id="big-image-1" class="big-image" src="image.jpeg" alt="big 
+image 1">
+ <img id="big-image-2" class="big-image" src="images.jpeg" alt="big 
+image 2">
+ <img id="big-image-3" class="big-image" src="background.jpeg" alt="big 
+image 3">
+ </div>
+ <div class="container">
+ <img class="overlap1" src="image.jpeg" alt="image 1" 
+onmouseover="showBig(1)" onmouseout="hideBig(1)">
+ <img class="overlap2" src="images.jpeg" alt="image 2" 
+onmouseover="showBig(2)" onmouseout="hideBig(2)">
+ <img class="overlap3" src="background.jpeg" alt="image 3" 
+onmouseover="showBig(3)" onmouseout="hideBig(3)">
+</div>
+</body>
+</html>
+
